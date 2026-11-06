@@ -1,0 +1,72 @@
+/* Shelby adaptation. All original ThreeUI rules remain in shelby.html. */
+:root { --ink-soft:#66594c; --ink-faint:#776858; }
+.top { position:absolute; padding-block:22px 36px; }
+.top .name { font-size:clamp(25px,2.6vw,34px); white-space:normal; }
+.top nav { font-size:15px; gap:24px; }
+.hero { padding:100px 0 44px; min-height:100svh; align-content:center; }
+.hero-kicker { font-size:13px; letter-spacing:.15em; margin:12px 0 0; }
+.sb-3d { max-width:1180px; }
+.sb-stage { max-width:1280px; margin-block:-5.8%; }
+.sb-wrap { gap:18px; }
+.sb-arrow { width:48px; min-height:48px; color:#776858; }
+.sb-caption { font-size:18px; text-transform:none; letter-spacing:.035em; color:#554839; }
+.sb-count { display:block; text-align:center; margin-bottom:6px; font-size:13px; letter-spacing:.18em; color:#776858; }
+.sb-tools { padding:5px 10px; gap:8px; }
+.tool { width:40px; height:40px; }
+.tool svg { width:19px; height:19px; }
+.zoom-read { min-width:46px; font-size:14px; color:#66594c; }
+.sb-hint { color:#776858; font-size:12px; letter-spacing:.06em; text-transform:none; }
+.sb-hint.gone { opacity:1; }
+.hero-down { display:none; }
+.story-reader { max-width:600px; padding:0 22px; text-align:center; margin:0 auto; font-size:20px; line-height:1.5; color:#433930; white-space:pre-line; }
+@media(min-width:641px) {
+  .story-reader { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:normal; }
+}
+.rule { margin:20px auto 38px; }
+.about { display:block; max-width:820px; }
+.section-label { font-size:13px; letter-spacing:.16em; color:#776858; }
+.bio { font-size:20px; font-weight:400; max-width:none; line-height:1.6; }
+.bio + .bio { margin-top:14px; }
+.prototype-status { margin-top:18px; border-top:1px solid var(--hairline); padding-top:16px; font-size:16px; line-height:1.5; color:#66594c; }
+.plates { max-width:820px; }
+.plate .n,.plate .p { color:#776858; font-size:14px; }
+.plate { min-height:58px; }
+.foot { font-size:14px; text-transform:none; letter-spacing:.025em; padding-inline:20px; line-height:1.8; color:#776858; }
+.foot a { text-decoration:underline; text-underline-offset:3px; }
+button:focus-visible,a:focus-visible { outline:2px solid #9a6a3e; outline-offset:5px; }
+.sb-zone:focus-visible { outline-offset:-5px; }
+.sb-full video { position:absolute; object-fit:contain; pointer-events:none; }
+.media-replay { width:auto; border-radius:18px; padding:0 12px; font-size:14px; }
+.media-replay[hidden] { display:none; }
+.boot-status { text-align:center; font-size:18px; }
+@media (pointer:coarse) { #loupeBtn,.tool-sep { display:none; } }
+@media (max-width:640px) {
+  .top { padding-block:20px; gap:10px; }
+  .top .name { max-width:310px; font-size:28px; line-height:1.08; }
+  .top nav { font-size:14px; }
+  .hero { padding-top:146px; min-height:0; padding-bottom:26px; }
+  .hero-kicker { max-width:330px; font-size:12px; letter-spacing:.11em; margin:0 0 12px; }
+  .sb-wrap { width:100%; margin:0; gap:17px; }
+  .sb-stage { margin-block:-9%; }
+  .sb-arrow { width:32px; background:rgba(248,242,231,.76); min-height:44px; border-radius:20px; }
+  .sb-arrow.left { left:0; }
+  .sb-arrow.right { right:0; }
+  .sb-arrow svg { width:10px; height:28px; }
+  .sb-caption { font-size:18px; text-align:center; }
+  .sb-3d { flex:none; width:calc(100% - 34px); }
+  .story-reader { font-size:19px; max-width:430px; }
+  .sb-hint { font-size:12px; }
+  .sb-tools { margin-top:0; }
+  .botany { display:none; }
+  .rule { margin:24px auto; }
+  .about,.plates { padding-inline:24px; }
+  .bio { font-size:18px; }
+  .plate { grid-template-columns:2em 1fr; gap:10px; }
+  .plate .p { display:none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation:none !important; scroll-behavior:auto !important; }
+  .sb-tilt { transform:scale(var(--zoom,1)); }
+}
+
+.loupe:not(.on) .ring,.loupe:not(.on) .grip {pointer-events:none;}

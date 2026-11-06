@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.sites-runtime/
+.env*
+*.tar.gz
+
+# Local hosting identity and generated artifacts
+.openai/
+.DS_Store
+*.zip
+__pycache__/
+.venv/

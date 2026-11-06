@@ -1,0 +1,76 @@
+SHELBY LIVING STORYBOOK — DOWNLOAD AND UPLOAD GUIDE
+Prepared November 5, 2026 (Alaska time)
+
+This folder contains the recovered six-video source prepared for GitHub,
+including artwork, fonts, original images and future-interaction notes.
+The application code and media have not been changed in this recovery.
+
+UPLOAD WITH GITHUB DESKTOP (WINDOWS)
+
+1. Download this ZIP to your PC, right-click it, and choose Extract All.
+   Keep the extracted copy as your backup.
+2. Install GitHub Desktop from https://desktop.github.com/ if needed.
+   Sign in as kprasad1221.
+3. In GitHub Desktop, choose File > Clone repository > URL. Paste:
+   https://github.com/kprasad1221/shelby-living-storybook
+   Choose a new local folder and click Clone.
+4. Choose Repository > Show in Explorer to open the cloned folder.
+   In another Explorer window, open the extracted shelby-living-storybook
+   folder. Copy ALL its contents INTO the cloned folder. Replace the
+   starter README.md when prompted.
+   IMPORTANT: package.json must sit directly inside the cloned folder,
+   next to README.md. Do not put an extra storybook folder inside it.
+   The archive contains no .git folder, so the clone keeps its Git history.
+5. Return to GitHub Desktop and review Changes. Enter this summary:
+   Add complete six-video living storybook
+   Click Commit to main, then Push origin.
+6. Open the repository website and confirm it contains package.json,
+   src/, public/, story.json, and docs/. Open:
+   public/landing-pages/shelby-media/
+   Confirm all six MP4s are present: warmth, room, carried, waiting,
+   blanket, and together.
+
+Do not upload the ZIP itself as your project source. Upload its contents.
+If Desktop reports an error, keep the local folder and copy the exact
+error into chat. No force-push or repository reset is needed for this flow.
+
+RUN ON YOUR PC
+
+Install a current supported Node.js LTS release from https://nodejs.org/.
+Open a terminal in the cloned folder (the one containing package.json):
+
+npm ci
+npm run dev
+
+Open the localhost address printed in the terminal. Stop with Ctrl+C.
+For a production build: npm run build
+For a local production preview: npm run preview
+Opening index.html directly is not the development workflow for this app.
+Node dependencies are intentionally excluded from this ZIP; npm ci installs
+those listed in package-lock.json. Python is only needed to regenerate
+page textures when changing the story artwork or baked-in text.
+
+WHERE WE CONTINUE
+
+Keep this cloned folder as your working project. Use GitHub Desktop to
+commit and push each finished change. We can work on this folder through
+local ChatGPT/Codex access when available, or exchange source ZIPs/patches
+in chat. Confirm a visible GitHub commit before treating a push as complete.
+Hover interactions and branching are ideas, not implemented features;
+see docs/interaction-experiments.md.
+
+GitHub commits do not automatically update the existing ChatGPT Site.
+The existing published book is separate from this upload.
+
+VERIFIED IN THIS RECOVERY
+
+- Production build succeeded (Vite 6.4.3).
+- All six referenced video files, posters and spread textures exist.
+- Source/media match the folder prepared in the interrupted session.
+- The archive excludes dependencies, Git credentials/history, temporary
+  hosting identity and generated build output.
+- ZIP entries and CRCs were checked; file sizes fit ordinary GitHub uploads.
+- No new browser-interaction playtest was performed in this recovery.
+- Existing build warning: unused fragment-mono.woff2 font reference.
+
+The main README retains project credits, technical detail and known limits.
